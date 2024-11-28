@@ -1,0 +1,195 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0d1117, #161b22);
+    color: #f0f6fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+/* Main Container Styling */
+#game-container {
+    background: rgba(33, 37, 41, 0.95);
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 255, 255, 0.1);
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Header Styling */
+#game-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #58a6ff;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Story Text Styling */
+#story-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #d1d5db;
+}
+
+/* Input and Button Container */
+#input-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+#input-container input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #21262d;
+    border-radius: 8px;
+    background-color: #161b22;
+    color: #c9d1d9;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#input-container input:focus {
+    border-color: #58a6ff;
+}
+
+#input-container button {
+    flex-shrink: 0;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #238636, #2ea043);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+#input-container button:hover {
+    background: #2ea043;
+    transform: scale(1.05);
+}
+
+#input-container button:active {
+    transform: scale(0.95);
+}
+
+/* Choices Buttons */
+#choices button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    font-size: 1rem;
+    color: white;
+    background: linear-gradient(90deg, #6e40c9, #9a5cf3);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#choices button:hover {
+    background: #835ce9;
+    transform: scale(1.05);
+}
+
+#choices button:active {
+    transform: scale(0.95);
+}
+
+/* Footer Styling */
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: #c9d1d9;
+    font-size: 0.85rem;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #game-container {
+        padding: 15px;
+    }
+
+    #game-container h1 {
+        font-size: 1.6rem;
+    }
+
+    #story-text {
+        font-size: 1rem;
+    }
+
+    #input-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #input-container input,
+    #input-container button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    #choices button {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    #game-container {
+        padding: 10px;
+    }
+
+    #game-container h1 {
+        font-size: 1.4rem;
+    }
+
+    #story-text {
+        font-size: 0.9rem;
+    }
+
+    #input-container input,
+    #input-container button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    #choices button {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+}
